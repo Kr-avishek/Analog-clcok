@@ -1,0 +1,68 @@
+.container{
+    height:100%;
+    width:100%;
+    margin:0;
+    position:absolute;
+    background-image:linear-gradient(to right, #434343 0%, black 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    height:200px;
+    width:200px;
+    border:4px solid #fff;
+    border-radius: 50%;
+    background-color:transparent;
+    position:relative;
+    transform: translateY(-5px);
+
+}
+.dot{
+    height: 15px;
+    width:15px;
+    border-radius: 50%;
+    background-color: #f7b516;
+    position: absolute;
+    top:47%;
+    left: 48%;
+    z-index: 1;
+}
+.twelve{
+    color: #f7b516 !important;
+    position: absolute;
+    top:2%;
+    left: 46%;
+}
+.three{
+    color: #f7b516 !important;
+    position: absolute;
+    top:45%;
+    left: 94%;
+}
+.nine{
+    color: #f7b516 !important;
+    position: absolute;
+    top:45%;
+    left:2%;
+}
+.six{
+    color: #f7b516 !important;
+    position: absolute;
+    top:90%;
+    left: 46%;   
+}
+
+.hands{
+    height: 2px;
+    width:50%;
+    background-color: #fff;
+    position: absolute;
+    top:50%;
+    border-radius:25px;
+    transform-origin: 100%;
+}
+.secHand{
+    background-color: #f7b516;
+}
+

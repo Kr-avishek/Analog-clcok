@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Kr logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Analog Clockt</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="dot"></div>
+            <div class="12 twelve"><strong>12</strong></div>
+            <div class="f three"><strong>3</strong></div>
+            <div class="f six"><strong>6</strong></div>
+            <div class="f nine"><strong>9</strong></div>
+            <div class="hands hourHand"></div>
+            <div class="hands minHand"></div>
+            <div class="hands secHand"></div>
+        </div>
+    </div>
+    <script>
+        setInterval(rotateHands, 1000);
+        const hrHand = document.querySelector('.hourHand');
+        const minHand = document.querySelector('.minHand');
+        const secHand = document.querySelector('.secHand');
+        function rotateHands(){
+            let now = new Date();
+            let secNow = now.getSeconds();
+            let minNow = now.getMinutes();
+            let hrNow = now.getHours();
+            let secDeg = ((secNow)/60)*360 +90;
+            let minDeg = ((minNow)/60)*360+90;
+            let hrdeg = ((hrNow)/12)*360+90;
+
+            secHand.style.transform = `rotate(${secDeg}deg)`;
+            minHand.style.transform = `rotate(${minDeg}deg)`;
+            hrHand.style.transform = `rotate(${hrdeg}deg)`;
+
+        }
+    </script>
+</body>
+</html>
